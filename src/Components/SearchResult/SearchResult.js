@@ -42,7 +42,6 @@ class SearchResult extends Component {
   // passed to ref "escape hatch"
   bindElement (el) {
     this.link = el;
-    const { selected, goToLink } = this.props;
   }
 
   // allows us to programmatically click on a link
@@ -65,7 +64,7 @@ class SearchResult extends Component {
   }
 
   render () {
-    const { typedValue, result, selected, goToLink, style } = this.props;
+    const { typedValue, result, selected, style } = this.props;
     const { name, url, location } = result;
     return (
       <li
